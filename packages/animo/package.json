@@ -2,6 +2,7 @@
   "name": "animo-core",
   "version": "1.0.0",
   "description": "animo animation core",
+  "repository": "https://github.com/ThrivingKings/animo/tree/master/packages/animo",
   "keywords": [
     "animo", "animo-core"
   ],

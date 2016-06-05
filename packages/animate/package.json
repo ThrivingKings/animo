@@ -2,6 +2,7 @@
   "name": "animo-animate",
   "version": "1.0.2",
   "description": "animo animation handler",
+  "repository": "https://github.com/ThrivingKings/animo/tree/master/packages/animate",
   "keywords": [
     "animo",
     "animo-animate",
