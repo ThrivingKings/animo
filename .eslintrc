@@ -1,0 +1,17 @@
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "modules": true,
+  },
+  "rules": {
+    "semi": [2, "never"],
+    "strict": [2, "global"],
+    "eol-last": [0],
+    "quotes": [2, "single"],
+    "no-mixed-requires": [0],
+    "no-underscore-dangle": [0],
+    "key-spacing": [0],
+    "no-use-before-define": [0],
+    "new-cap": [0]
+  }
+}

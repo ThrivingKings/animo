@@ -1,0 +1,17 @@
+{
+  "name": "animo-core",
+  "version": "1.0.0",
+  "description": "animo animation core",
+  "keywords": [
+    "animo", "animo-core"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/animo.min.js",
+  "author": "Daniel Raftery",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.iselement": "4.0.0"
+  }
+}
