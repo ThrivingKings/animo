@@ -91,7 +91,10 @@ const animo = (element, options = {}) => {
 
       if (state.iteration === props.iterate) {
         props.onComplete({ ...animoEl, raw: element })
-        return resolve(element)
+        setTimeout(() => {
+          resolve(element)
+        }, 1)
+        return
       }
 
       props.onIteration({ ...animoEl, raw: element })
@@ -104,7 +107,10 @@ const animo = (element, options = {}) => {
     } else {
       element.addEventListener(vendor.animationEnd, () => {
         props.onComplete({ ...animoEl, raw: element })
-        return resolve(element)
+        setTimeout(() => {
+          resolve(element)
+        }, 1)
+        return
       })
     }
 
