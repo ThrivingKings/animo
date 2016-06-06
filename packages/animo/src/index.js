@@ -1,17 +1,34 @@
 import isElement from 'lodash.iselement'
 
+const VENDOR_TRANSFORMS = [
+  'mozTransform',
+  'msTransform',
+  'oTransform',
+  'transform',
+  'webkitTransform'
+]
+
+const VENDOR_TRANSITIONS = [
+  'mozTransition',
+  'msTransition',
+  'oTransition',
+  'transition',
+  'webkitTransition'
+]
+
+const VENDOR_ANIMATION_LISTENERS = {
+  'animation': 'animationend',
+  'OAnimation': 'oAnimationEnd',
+  'MozAnimation': 'animationend',
+  'WebkitAnimation': 'webkitAnimationEnd'
+}
+
 const whichAnimationEvent = () => {
   const el = document.createElement('fakeelement')
-  const animations = {
-    'animation': 'animationend',
-    'OAnimation': 'oAnimationEnd',
-    'MozAnimation': 'animationend',
-    'WebkitAnimation': 'webkitAnimationEnd'
-  }
 
-  for (const a in animations) {
+  for (const a in VENDOR_ANIMATION_LISTENERS) {
     if (el.style[a] !== undefined) {
-      return animations[a]
+      return VENDOR_ANIMATION_LISTENERS[a]
     }
   }
 }
@@ -44,8 +61,15 @@ const animo = (element, options = {}) => {
       reset: () => {
         element.style = originalStyles
       },
+      transform: (styleString) => {
+        VENDOR_TRANSFORMS.forEach(transform => {
+          element.style[transform] = styleString
+        })
+      },
       transition: (styleString) => {
-        element.style.transition = styleString
+        VENDOR_TRANSITIONS.forEach(transition => {
+          element.style[transition] = styleString
+        })
       }
     }
 

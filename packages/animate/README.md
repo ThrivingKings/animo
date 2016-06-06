@@ -21,3 +21,12 @@ animate(document.querySelector('.some-element'), { classNames: ['animated', 'bou
     /* ... */
   })
 ```
+
+## Options
+
+```js
+{
+  classNames: ['animated'],
+  keep: false
+}
+```
