@@ -17,7 +17,6 @@ const rotate = (el, options) => {
   const { deg, interval, iterate, timing } = props
 
   return new animo(el, {
-    interval,
     iterate,
     onComplete: function(element) {
       if (!props.keep) {

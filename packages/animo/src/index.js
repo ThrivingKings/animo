@@ -16,31 +16,43 @@ const VENDOR_TRANSITIONS = [
   'webkitTransition'
 ]
 
-const VENDOR_ANIMATION_LISTENERS = {
-  'animation': 'animationend',
-  'OAnimation': 'oAnimationEnd',
-  'MozAnimation': 'animationend',
-  'WebkitAnimation': 'webkitAnimationEnd'
+const VENDOR_PREFIXED_LISTENERS = {
+  'animation': {
+    animationEnd: 'animationend',
+    transitionEnd: 'transitionend'
+  },
+  'OAnimation': {
+    animationEnd: 'oAnimationEnd',
+    transitionEnd: 'oTransitionEnd'
+  },
+  'MozAnimation': {
+    animationEnd: 'animationend',
+    transitionEnd: 'transitionend'
+  },
+  'WebkitAnimation': {
+    animationEnd: 'webkitAnimationEnd',
+    transitionEnd: 'webkitTransitionEnd'
+  }
 }
 
-const whichAnimationEvent = () => {
+const whichVendor = () => {
   const el = document.createElement('fakeelement')
 
-  for (const a in VENDOR_ANIMATION_LISTENERS) {
+  for (const a in VENDOR_PREFIXED_LISTENERS) {
     if (el.style[a] !== undefined) {
-      return VENDOR_ANIMATION_LISTENERS[a]
+      return VENDOR_PREFIXED_LISTENERS[a]
     }
+
+    return VENDOR_PREFIXED_LISTENERS.animation
   }
 }
 
 const animo = (element, options = {}) => {
   const state = {
-    interval: null,
     iteration: 0
   }
 
   const defaultProps = {
-    interval: 500,
     iterate: 1,
     isAnimation: false,
     onComplete: () => {},
@@ -54,6 +66,7 @@ const animo = (element, options = {}) => {
 
     const originalStyles = element.style
     const props = { ...defaultProps, ...options }
+    const vendor = whichVendor()
     const animoEl = {
       css: (styles) => {
         Object.assign(element.style, styles)
@@ -73,29 +86,29 @@ const animo = (element, options = {}) => {
       }
     }
 
-    const animationStep = () => {
-      if (state.iteration === props.iterate) {
-        state.interval = clearInterval(state.interval)
-        state.interval = null
+    const animationStep = (event) => {
+      element.removeEventListener(vendor.transitionEnd, animationStep)
 
+      if (state.iteration === props.iterate) {
         props.onComplete({ ...animoEl, raw: element })
         return resolve(element)
       }
 
       props.onIteration({ ...animoEl, raw: element })
+      element.addEventListener(vendor.transitionEnd, animationStep)
       state.iteration++
     }
 
-    animationStep()
-
     if (!props.isAnimation) {
-      state.interval = setInterval(animationStep, props.interval)
+      element.addEventListener(vendor.transitionEnd, animationStep)
     } else {
-      element.addEventListener(whichAnimationEvent(), () => {
+      element.addEventListener(vendor.animationEnd, () => {
         props.onComplete({ ...animoEl, raw: element })
         return resolve(element)
       })
     }
+
+    animationStep()
   })
 }
 
