@@ -1,0 +1,20 @@
+{
+  "name": "animo-countdown",
+  "version": "1.0.5",
+  "description": "animo countdown bar",
+  "repository": "https://github.com/ThrivingKings/animo/tree/master/packages/countdown",
+  "keywords": [
+    "animo",
+    "animo-countdown",
+    "countdown"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/countdown.min.js",
+  "author": "Daniel Raftery",
+  "license": "MIT",
+  "dependencies": {
+    "animo-core": "^1.0.0"
+  }
+}

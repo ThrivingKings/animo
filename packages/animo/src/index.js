@@ -56,7 +56,8 @@ const animo = (element, options = {}) => {
     iterate: 1,
     isAnimation: false,
     onComplete: () => {},
-    onIteration: () => {}
+    onIteration: () => {},
+    onMount: () => {}
   }
 
   return new Promise ((resolve, reject) => {
@@ -64,29 +65,40 @@ const animo = (element, options = {}) => {
       return reject('could not find element')
     }
 
-    const originalStyles = element.style
-    const props = { ...defaultProps, ...options }
+    const originalStyles = { ...element.style }
+    const props = Object.freeze({ ...defaultProps, ...options })
     const vendor = whichVendor()
     const animoEl = {
-      css: (styles) => {
-        Object.assign(element.style, styles)
+      css: styles => {
+        element.setAttribute('style', JSON.stringify(styles))
       },
       reset: () => {
-        element.style = originalStyles
+        element.setAttribute('style', JSON.stringify(originalStyles))
       },
-      transform: (styleString) => {
+      transform: styleString => {
         VENDOR_TRANSFORMS.forEach(transform => {
           element.style[transform] = styleString
         })
       },
-      transition: (styleString) => {
+      transition: styleString => {
         VENDOR_TRANSITIONS.forEach(transition => {
           element.style[transition] = styleString
         })
       }
     }
 
-    const animationStep = (event) => {
+    const performOnMount = () => {
+      return new Promise ((resolve, reject) => {
+        props.onMount({ ...animoEl, raw: element })
+        // TODO: actually confirm updates rather than
+        // delaying and blindly resolving
+        setTimeout(() => {
+          resolve()
+        }, 1)
+      })
+    }
+
+    const animationStep = event => {
       element.removeEventListener(vendor.transitionEnd, animationStep)
 
       if (state.iteration === props.iterate) {
@@ -114,7 +126,11 @@ const animo = (element, options = {}) => {
       })
     }
 
-    animationStep()
+    (async function() {
+      await performOnMount()
+      animationStep()
+    }())
+
   })
 }
 

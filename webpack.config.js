@@ -2,6 +2,7 @@ module.exports = {
   entry: {
     animo: "./packages/animo/src/",
     animate: "./packages/animate/src/",
+    countdown: "./packages/countdown/src/",
     rotate: "./packages/rotate/src/"
   },
   output: {
