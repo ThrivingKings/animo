@@ -25,3 +25,15 @@ const flashAnimation = (el) => {
   })
 }
 ```
+
+## Options
+
+```js
+{
+  iterate: 1,
+  isAnimation: false,
+  onComplete: () => {},
+  onIteration: () => {},
+  onMount: () => {}
+}
+```
