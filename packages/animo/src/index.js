@@ -1,5 +1,9 @@
 import isElement from 'lodash.iselement'
 
+if (!global._babelPolyfill) {
+  require('babel-polyfill')
+}
+
 const VENDOR_TRANSFORMS = [
   'mozTransform',
   'msTransform',
