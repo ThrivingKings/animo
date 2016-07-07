@@ -3,7 +3,9 @@ module.exports = {
     animo: "./packages/animo/src/",
     animate: "./packages/animate/src/",
     countdown: "./packages/countdown/src/",
-    rotate: "./packages/rotate/src/"
+    rotate: "./packages/rotate/src/",
+    // Package browser
+    packageBrowser: "./browser/"
   },
   output: {
     path: __dirname + "/packages",
