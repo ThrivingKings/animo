@@ -42,6 +42,45 @@ entry: {
 }
 ```
 
+## Package browser
+Now that you've established your package, the easiest way to fine-tune is via the package browser. The package browser is a quick and easy way to demo animo packages in a browser.
+
+Simply add a reference to your package in the `browser/examples` directory, with an array of demos. Make sure the name matches the entry point you specified when establishing your package.
+```
+export default {
+  name: 'funkyjazzpackage',
+  demos: [
+    {
+      title: 'simple funky jazz animation',
+      options: {
+        classNames: ['animated', 'funkyjazz']
+        /* ... */
+      }
+    }
+  ]
+}
+```
+Now run `npm start` and navigate to `http://localhost:8080`
+
+Additionally, you can specify the styles of the wrapper element as well as the 'demo' box itself
+```
+demos: [
+  {
+    title: 'simple funky jazz animation',
+    options: {
+      classNames: ['animated', 'funkyjazz']
+      /* ... */
+    },
+    styles: {
+      backgroundColor: 'red'
+    }
+    wrapperStyles: {
+      overflow: 'hidden'
+    }
+  }
+]
+```
+
 ## Testing
 As stated above, keep all tests in a `tests` folder within your package's `src`
 ```
@@ -49,9 +88,6 @@ $ npm test
 ```
 
 When adding tests, use the test suite that's currently made available and keep filenames relevant to the function being tested (ie `bouncing.test.js`)
-
-## Package browser
-Coming soon.
 
 # Contributor Code of Conduct
 

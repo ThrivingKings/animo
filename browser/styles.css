@@ -1,0 +1,23 @@
+body {
+  background: white;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
+
+h2 { padding-left: 20px; }
+h4 { margin-top: 0px; }
+
+.example-bundle { padding: 0 40px; }
+
+.demo {
+  background: #eee;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+.box {
+  background: #32D2C0;
+  height: 100px;
+  width: 100px;
+}
