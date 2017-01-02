@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.animojs.com/">
+  <a href="http://www.animojs.com/">
     <img alt="Animo" src="http://www.animojs.com/logo.svg" width="433">
   </a>
 </p>
