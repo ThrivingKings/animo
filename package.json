@@ -33,7 +33,7 @@
     "test": "yarn lint && karma start --single-run",
     "start": "webpack -w & webpack-dev-server --content-base browser/",
     "build": "yarn test && webpack -p",
-    "docs:build": "gitbook build",
+    "docs:build": "gitbook build && cp CNAME _book",
     "docs:deploy": "yarn docs:build && gh-pages -d _book -b gh-pages"
   },
   "author": "Daniel Raftery"
