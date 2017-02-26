@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install animo-animate
+❯ yarn add animo-animate
 ```
 
 ## Usage

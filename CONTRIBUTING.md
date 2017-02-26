@@ -9,18 +9,18 @@ Also, keep in mind that any new packages will need to be released and maintained
 # Developing
 ## Getting started
 ```
-$ git clone https://github.com/ThrivingKings/animo
-$ cd animo
-$ npm install
+❯ git clone https://github.com/ThrivingKings/animo
+❯ cd animo
+❯ yarn
 ```
 
 Then you can either
 ```
-$ npm start
+❯ yarn start
 ```
 Or
 ```
-$ npm run build
+❯ yarn build
 ```
 
 ## Establishing your package
@@ -60,7 +60,7 @@ export default {
   ]
 }
 ```
-Now run `npm start` and navigate to `http://localhost:8080`
+Now run `yarn start` and navigate to `http://localhost:8080`
 
 Additionally, you can specify the styles of the wrapper element as well as the 'demo' box itself
 ```
@@ -84,7 +84,7 @@ demos: [
 ## Testing
 As stated above, keep all tests in a `tests` folder within your package's `src`
 ```
-$ npm test
+❯ yarn test
 ```
 
 When adding tests, use the test suite that's currently made available and keep filenames relevant to the function being tested (ie `bouncing.test.js`)
