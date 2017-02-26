@@ -1,0 +1,448 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Authoring · Animo</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="contributing/" />
+    
+    
+    <link rel="prev" href="using/rotate.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="using/">
+            
+                <a href="using/">
+            
+                    
+                    Using
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="using/animate.html">
+            
+                <a href="using/animate.html">
+            
+                    
+                    Animate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="using/countdown.html">
+            
+                <a href="using/countdown.html">
+            
+                    
+                    Countdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="using/rotate.html">
+            
+                <a href="using/rotate.html">
+            
+                    
+                    Rotate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="authoring.html">
+            
+                <a href="authoring.html">
+            
+                    
+                    Authoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="contributing/">
+            
+                <a href="contributing/">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="contributing/development.html">
+            
+                <a href="contributing/development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="contributing/code-of-conduct.html">
+            
+                <a href="contributing/code-of-conduct.html">
+            
+                    
+                    Code of conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="special-thanks.html">
+            
+                <a href="special-thanks.html">
+            
+                    
+                    Special thanks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/ThrivingKings/animo">
+            
+                    
+                    Github repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Authoring</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="authoring">Authoring</h1>
+<p>The core of Animo provides you with an efficient way to structure nearly any type of animation. The ideology behind Animo is breaking large animations into many small iterations, using a transition to preform each step. For instance, considering the <a href="https://github.com/ThrivingKings/animo/tree/master/packages/countdown" target="_blank">countdown package</a>, this comes in very handy when wishing to perform something along the lines of &quot;every second, shrink the progress bar by X percent&quot;.</p>
+<p>Animo lets you specify a total number of iterations and keeps an eye on your transitions and animations, notifying you when each has completed. One caveat with that, is each iteration expects a transition. If one is not provided, Animo will have nothing to listen for and will not progress.</p>
+<h3 id="install">Install</h3>
+<pre><code>&#x276F; yarn add animo-core
+</code></pre><h3 id="taking-advantage-of-promises">Taking advantage of promises</h3>
+<p>When structuring your plugin always remember to return a new instance of Animo.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> animo <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;animo-core&apos;</span>
+
+<span class="hljs-keyword">const</span> myPlugin = (el, options) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> animo(el, options)
+}
+</code></pre>
+<p>Allowing your plugin to be used to its full potential.</p>
+<pre><code class="lang-js">myPlugin(<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.my-element&apos;</span>))
+  .then(() =&gt; {
+    <span class="hljs-comment">/* ...  */</span>
+  })
+  .catch(err =&gt; {
+    <span class="hljs-comment">/* ... */</span>
+  })
+</code></pre>
+<h3 id="using-default-properties-and-a-state">Using default properties and a state</h3>
+<p>Not every plugin will require the maintaining of a state but it is always a good idea to define a set of default properties that will be overwritten by options. This clear and concise approach prevents any confusing when using your plugin.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> myPlugin = (el, options) =&gt; {
+
+  <span class="hljs-keyword">const</span> defaultProps = {
+    interval: <span class="hljs-number">1000</span>,
+    iterate: <span class="hljs-number">5</span>
+  }
+
+  <span class="hljs-keyword">const</span> props = { ...defaultProps, ...options }
+
+  <span class="hljs-comment">/* ... */</span>
+}
+</code></pre>
+<h3 id="core-functionality">Core functionality</h3>
+<p>Following the recommendation above, Animo provides an object of default properties that will be overwritten by the options you provide.</p>
+<pre><code class="lang-json">{
+  iterate: <span class="hljs-number">1</span>,
+  isAnimation: <span class="hljs-literal">false</span>,
+  onComplete: () =&gt; {},
+  onIteration: () =&gt; {},
+  onMount: () =&gt; {}
+}
+</code></pre>
+<ul>
+<li><p><code>iterate: number</code></p>
+<p>Plain and simply, the number of times to loop before resolving.</p>
+</li>
+<li><p><code>isAnimation: bool</code></p>
+<p>If true, performs a single iteration and listens for the completion of a CSS animation.</p>
+</li>
+<li><p><code>onComplete: function</code></p>
+<p>Returns an Animo infused element when the last transition of the last iteration has completed (or the initial animation has completed when isAnimation: true)</p>
+</li>
+<li><p><code>onIteration: function</code></p>
+<p>Returns an Animo infused element when the transition of the previous iteration has completed</p>
+</li>
+<li><p><code>onMount: function</code></p>
+<p>Returns an Animo infused element before the first iteration or animation takes place</p>
+</li>
+</ul>
+<h3 id="animo-infused-elements">Animo infused elements</h3>
+<p>Along the way, Animo returns the currently-in-use element (along with some helper functions) to make transformations easier to manage.</p>
+<p>The following four helper functions are returned, along with the raw element, in the callback of each of the core Animo functions.</p>
+<pre><code class="lang-js">{
+  css: stylesObject =&gt; {},
+  reset: () =&gt; {},
+  transform: styleString =&gt; {},
+  transition: styleString =&gt; {}
+}
+</code></pre>
+<p>Calling these will allow you to easily adjust the styling of the element you&apos;re manipulating.</p>
+<pre><code class="lang-js">onComplete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+  <span class="hljs-keyword">if</span> (!props.keep) {
+    element.reset()
+  }
+},
+onIteration: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">element</span>) </span>{
+  state.currentDeg = state.currentDeg + deg
+  element.transform(<span class="hljs-string">`rotate(<span class="hljs-subst">${state.currentDeg}</span>deg)`</span>)
+  element.transition(<span class="hljs-string">`transform <span class="hljs-subst">${interval}</span>ms <span class="hljs-subst">${timing}</span>`</span>)
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="using/rotate.html" class="navigation navigation-prev " aria-label="Previous page: Rotate">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="contributing/" class="navigation navigation-next " aria-label="Next page: Contributing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Authoring","level":"1.3","depth":1,"next":{"title":"Contributing","level":"1.4","depth":1,"path":"contributing/README.md","ref":"contributing/README.md","articles":[{"title":"Development","level":"1.4.1","depth":2,"path":"contributing/development.md","ref":"contributing/development.md","articles":[]},{"title":"Code of conduct","level":"1.4.2","depth":2,"path":"contributing/code-of-conduct.md","ref":"contributing/code-of-conduct.md","articles":[]}]},"previous":{"title":"Rotate","level":"1.2.3","depth":2,"path":"using/rotate.md","ref":"using/rotate.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Animo","gitbook":"*","description":"A powerful little tool for managing transitions and animations with JavaScript."},"file":{"path":"authoring.md","mtime":"2017-02-26T15:02:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-26T16:03:00.198Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
