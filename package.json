@@ -21,6 +21,8 @@
     "babel-preset-stage-0": "6.5.0",
     "eslint": "2.11.1",
     "expect": "1.20.1",
+    "gh-pages-cli": "0.2.0",
+    "gitbook-cli": "2.3.0",
     "karma": "0.13.22",
     "karma-firefox-launcher": "1.0.0",
     "karma-mocha": "1.0.1",
@@ -32,7 +34,9 @@
     "lint": "eslint packages/**/src/*.js",
     "test": "npm run lint && karma start --single-run",
     "start": "webpack -w & webpack-dev-server --content-base browser/",
-    "build": "npm test && webpack -p"
+    "build": "npm test && webpack -p",
+    "docs:build": "gitbook build",
+    "docs:deploy": "npm run docs:build && gh-pages -d _book -b gh-pages"
   },
   "author": "Daniel Raftery"
 }
