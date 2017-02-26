@@ -1,0 +1,7 @@
+{
+  "title": "Animo",
+  "description": "A powerful little tool for managing transitions and animations with JavaScript.",
+  "styles": {
+    "website": "styles/website.css"
+  }
+}
