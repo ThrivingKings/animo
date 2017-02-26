@@ -1,0 +1,8 @@
+.book-summary ul.summary li.active>a,
+.markdown-section a {
+  color: #32D2C0
+}
+
+.book-summary ul.summary li.active>a {
+  font-weight: bold;
+}
