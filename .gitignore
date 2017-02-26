@@ -3,3 +3,4 @@ node_modules
 /packages/*/lib
 *.log
 /packages/packageBrowser
+_book/
