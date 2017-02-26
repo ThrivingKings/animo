@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install animo-rotate
+❯ yarn add animo-rotate
 ```
 
 ## Usage

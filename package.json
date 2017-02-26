@@ -3,22 +3,16 @@
   "description": "A powerful little tool for managing animations",
   "repository": "https://github.com/ThrivingKings/animo",
   "license": "MIT",
-  "dependencies": {
-    "babel-polyfill": "6.9.1",
-    "babel-runtime": "6.9.2",
-    "react": "15.2.0",
-    "react-dom": "15.2.0",
-    "webpack": "1.13.1",
-    "webpack-dev-server": "1.14.1"
-  },
   "devDependencies": {
     "babel-core": "6.9.1",
     "babel-eslint": "6.0.4",
     "babel-loader": "6.2.4",
     "babel-plugin-transform-runtime": "6.9.0",
+    "babel-polyfill": "6.9.1",
     "babel-preset-es2015": "6.9.0",
     "babel-preset-react": "6.11.1",
     "babel-preset-stage-0": "6.5.0",
+    "babel-runtime": "6.9.2",
     "eslint": "2.11.1",
     "expect": "1.20.1",
     "gh-pages-cli": "0.2.0",
@@ -28,15 +22,19 @@
     "karma-mocha": "1.0.1",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "1.7.0",
-    "mocha": "2.5.3"
+    "mocha": "2.5.3",
+    "react": "15.2.0",
+    "react-dom": "15.2.0",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
   },
   "scripts": {
     "lint": "eslint packages/**/src/*.js",
-    "test": "npm run lint && karma start --single-run",
+    "test": "yarn lint && karma start --single-run",
     "start": "webpack -w & webpack-dev-server --content-base browser/",
-    "build": "npm test && webpack -p",
+    "build": "yarn test && webpack -p",
     "docs:build": "gitbook build",
-    "docs:deploy": "npm run docs:build && gh-pages -d _book -b gh-pages"
+    "docs:deploy": "yarn docs:build && gh-pages -d _book -b gh-pages"
   },
   "author": "Daniel Raftery"
 }

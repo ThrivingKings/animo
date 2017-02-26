@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install animo-countdown
+❯ yarn add animo-countdown
 ```
 
 ## Usage

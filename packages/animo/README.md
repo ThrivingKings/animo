@@ -5,7 +5,7 @@
 ## Install
 
 ```
-$ npm install animo-core
+❯ yarn add animo-core
 ```
 
 ## Usage
