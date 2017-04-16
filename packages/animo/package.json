@@ -7,9 +7,10 @@
     "animo", "animo-core"
   ],
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
-  "main": "./lib/animo.min.js",
+  "main": "./dist/index.js",
   "author": "Daniel Raftery",
   "license": "MIT"
 }

@@ -39,4 +39,4 @@ const countdown = (el, options) => {
   })
 }
 
-module.exports = countdown
+export default countdown

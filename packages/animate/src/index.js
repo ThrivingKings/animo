@@ -29,4 +29,4 @@ const animate = (el, options) => {
   })
 }
 
-module.exports = animate
+export default animate

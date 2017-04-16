@@ -31,4 +31,4 @@ const rotate = (el, options) => {
   })
 }
 
-module.exports = rotate
+export default rotate

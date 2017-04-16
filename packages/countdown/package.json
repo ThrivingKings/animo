@@ -9,9 +9,10 @@
     "countdown"
   ],
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
-  "main": "./lib/countdown.min.js",
+  "main": "./dist/index.js",
   "author": "Daniel Raftery",
   "license": "MIT"
 }
