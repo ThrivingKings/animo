@@ -1,9 +1,3 @@
-import isElement from 'lodash.iselement'
-
-if (!global._babelPolyfill) {
-  require('babel-polyfill')
-}
-
 const VENDOR_TRANSFORMS = [
   'mozTransform',
   'msTransform',
@@ -65,7 +59,7 @@ const animo = (element, options = {}) => {
   }
 
   return new Promise ((resolve, reject) => {
-    if (!isElement(element)) {
+    if (!element) {
       return reject('could not find element')
     }
 
@@ -130,10 +124,8 @@ const animo = (element, options = {}) => {
       })
     }
 
-    (async function() {
-      await performOnMount()
-      animationStep()
-    }())
+    performOnMount()
+      .then(animationStep)
 
   })
 }

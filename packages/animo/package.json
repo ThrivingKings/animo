@@ -11,8 +11,5 @@
   ],
   "main": "./lib/animo.min.js",
   "author": "Daniel Raftery",
-  "license": "MIT",
-  "dependencies": {
-    "lodash.iselement": "4.0.0"
-  }
+  "license": "MIT"
 }
