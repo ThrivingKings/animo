@@ -1,4 +1,4 @@
-import animo from 'animo-core'
+import animo from '../../animo/src/index'
 
 const countdown = (el, options) => {
   const defaultProps = {

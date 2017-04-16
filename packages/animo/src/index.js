@@ -130,4 +130,4 @@ const animo = (element, options = {}) => {
   })
 }
 
-module.exports = animo
+export default animo

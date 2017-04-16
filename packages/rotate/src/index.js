@@ -1,4 +1,4 @@
-import animo from 'animo-core'
+import animo from '../../animo/src/index'
 
 const rotate = (el, options) => {
   const defaultProps = {
