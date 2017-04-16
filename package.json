@@ -41,7 +41,7 @@
   "scripts": {
     "lint": "eslint packages/**/src/*.js",
     "test": "yarn lint && karma start --single-run",
-    "start": "node build.js && webpack-dev-server --content-base browser/",
+    "start": "node build.js && rimraf browser/packages && cp -R packages browser/ && webpack-dev-server --content-base browser/",
     "build": "yarn test && node build.js",
     "docs:build": "gitbook build && cp CNAME _book",
     "docs:deploy": "yarn docs:build && gh-pages -d _book -b gh-pages"

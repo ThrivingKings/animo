@@ -9,10 +9,10 @@ const examples = req.keys().map(function(key){
 
 // Add script for each example
 examples.map(example => {
-  const { name, examples } = example
+  const { name } = example
 
   const script = document.createElement('script')
-  script.src = `${name}/lib/${name}.min.js`
+  script.src = `packages/${name}/dist/index.js`
   document.head.appendChild(script)
 })
 
