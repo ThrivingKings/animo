@@ -23,10 +23,12 @@ const rotate = (el, options) => {
         element.reset()
       }
     },
+    onMount: function(element) {
+      element.transition(`transform ${interval}ms ${timing}`)
+    },
     onIteration: function(element) {
       state.currentDeg = state.currentDeg + deg
       element.transform(`rotate(${state.currentDeg}deg)`)
-      element.transition(`transform ${interval}ms ${timing}`)
     }
   })
 }
