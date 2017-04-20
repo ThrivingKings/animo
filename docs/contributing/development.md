@@ -25,13 +25,15 @@ All plugins should live in the `packages` subdirectory and should follow this si
 -- package.json
 -- README.md
 ```
-Then, add your package to the webpack build process
-```json
-entry: {
-  animo: "./packages/animo/src/",
-  funkyjazzpackage: "./packages/funkyjazzpackage/src/",
-  /* ... */
-}
+Then, add your package to the `./build.js` script
+```js
+const packages = [
+  'animate',
+  'animo',
+  'countdown',
+  'rotate',
+  'funkyjazzpackage'
+]
 ```
 
 ### Package browser
