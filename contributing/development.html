@@ -298,12 +298,14 @@
 --- index.js
 -- package.json
 -- README.md
-</code></pre><p>Then, add your package to the webpack build process</p>
-<pre><code class="lang-json">entry: {
-  animo: <span class="hljs-string">&quot;./packages/animo/src/&quot;</span>,
-  funkyjazzpackage: <span class="hljs-string">&quot;./packages/funkyjazzpackage/src/&quot;</span>,
-  <span class="hljs-comment">/* ... */</span>
-}
+</code></pre><p>Then, add your package to the <code>./build.js</code> script</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> packages = [
+  <span class="hljs-string">&apos;animate&apos;</span>,
+  <span class="hljs-string">&apos;animo&apos;</span>,
+  <span class="hljs-string">&apos;countdown&apos;</span>,
+  <span class="hljs-string">&apos;rotate&apos;</span>,
+  <span class="hljs-string">&apos;funkyjazzpackage&apos;</span>
+]
 </code></pre>
 <h3 id="package-browser">Package browser</h3>
 <p>Now that you&apos;ve established your package, the easiest way to fine-tune is via the package browser. The package browser is a quick and easy way to demo animo packages in a browser.</p>
@@ -386,7 +388,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Development","level":"1.4.1","depth":2,"next":{"title":"Code of conduct","level":"1.4.2","depth":2,"path":"contributing/code-of-conduct.md","ref":"contributing/code-of-conduct.md","articles":[]},"previous":{"title":"Contributing","level":"1.4","depth":1,"path":"contributing/README.md","ref":"contributing/README.md","articles":[{"title":"Development","level":"1.4.1","depth":2,"path":"contributing/development.md","ref":"contributing/development.md","articles":[]},{"title":"Code of conduct","level":"1.4.2","depth":2,"path":"contributing/code-of-conduct.md","ref":"contributing/code-of-conduct.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Animo","gitbook":"*","description":"A powerful little tool for managing transitions and animations with JavaScript."},"file":{"path":"contributing/development.md","mtime":"2017-02-26T15:02:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-26T20:47:41.030Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Development","level":"1.4.1","depth":2,"next":{"title":"Code of conduct","level":"1.4.2","depth":2,"path":"contributing/code-of-conduct.md","ref":"contributing/code-of-conduct.md","articles":[]},"previous":{"title":"Contributing","level":"1.4","depth":1,"path":"contributing/README.md","ref":"contributing/README.md","articles":[{"title":"Development","level":"1.4.1","depth":2,"path":"contributing/development.md","ref":"contributing/development.md","articles":[]},{"title":"Code of conduct","level":"1.4.2","depth":2,"path":"contributing/code-of-conduct.md","ref":"contributing/code-of-conduct.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Animo","gitbook":"*","description":"A powerful little tool for managing transitions and animations with JavaScript."},"file":{"path":"contributing/development.md","mtime":"2017-04-22T12:45:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-22T12:53:10.518Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
