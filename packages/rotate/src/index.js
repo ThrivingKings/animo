@@ -1,4 +1,4 @@
-import animo from 'animo-core'
+import animo from '../../animo/src/index'
 
 const rotate = (el, options) => {
   const defaultProps = {
@@ -23,12 +23,14 @@ const rotate = (el, options) => {
         element.reset()
       }
     },
+    onMount: function(element) {
+      element.transition(`transform ${interval}ms ${timing}`)
+    },
     onIteration: function(element) {
       state.currentDeg = state.currentDeg + deg
       element.transform(`rotate(${state.currentDeg}deg)`)
-      element.transition(`transform ${interval}ms ${timing}`)
     }
   })
 }
 
-module.exports = rotate
+export default rotate

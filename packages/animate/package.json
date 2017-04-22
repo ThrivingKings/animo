@@ -9,12 +9,10 @@
     "animate"
   ],
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
-  "main": "./lib/animate.min.js",
+  "main": "./dist/index.js",
   "author": "Daniel Raftery",
-  "license": "MIT",
-  "dependencies": {
-    "animo-core": "^1.0.0"
-  }
+  "license": "MIT"
 }

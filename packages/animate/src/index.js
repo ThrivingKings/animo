@@ -1,4 +1,4 @@
-import animo from 'animo-core'
+import animo from '../../animo/src/index'
 
 const animate = (el, options) => {
   const defaultProps = {
@@ -29,4 +29,4 @@ const animate = (el, options) => {
   })
 }
 
-module.exports = animate
+export default animate

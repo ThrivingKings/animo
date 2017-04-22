@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /packages/*/lib
+/packages/*/dist
+/browser/packages
 *.log
 /packages/packageBrowser
 _book/

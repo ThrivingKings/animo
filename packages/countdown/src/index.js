@@ -1,4 +1,4 @@
-import animo from 'animo-core'
+import animo from '../../animo/src/index'
 
 const countdown = (el, options) => {
   const defaultProps = {
@@ -28,15 +28,14 @@ const countdown = (el, options) => {
         backgroundColor: props.color,
         height: '100%'
       })
-
+      element.transition('transform 1s linear')
       element.transform(`translate3d(${percent(state.elapsed)}%, 0, 0)`)
     },
     onIteration: element => {
       state.elapsed++
       element.transform(`translate3d(${percent(state.elapsed)}%, 0, 0)`)
-      element.transition('transform 1s linear')
     }
   })
 }
 
-module.exports = countdown
+export default countdown
